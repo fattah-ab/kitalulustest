@@ -5,9 +5,9 @@ const QuestionController = require('../controllers/Question');
 
 router.get('/', QuestionController.getQuestion)
 router.post('/create', QuestionController.createQuestion)
-// router.get('/edit/:id', VeterinaryController.editFormVeterinary)
-// router.put('/edit/:id', VeterinaryController.findVeterinaryById)
-// router.delete('/delete/:id', VeterinaryController.deleteVeterinary)
-// router.put('/online/:id', Authentication, VeterinaryController.online)
+router.get('/:id', QuestionController.getDetailQuestion)
+router.put('/edit/:id', QuestionController.editQuestion)
+router.delete('/delete/:id', QuestionController.deleteQuestion)
+
 
 module.exports = router
