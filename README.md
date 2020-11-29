@@ -37,3 +37,189 @@ IsActive    bool 
 ```
 
 ## Answer
+
+```
+to test this project please :
+
+1. Clone this repository
+2. Npm install at terminal
+3. Run endpoint/restfull API at Postman
+```
+
+## End Point/Restfull API
+
+**Create Question**
+### http://localhost:3000/question/create
+
+```
+Request Header : Not Needed
+```
+```
+Request Body : {
+  "question": "<user question>",
+  "createdBy": "<user name>"
+}
+```
+```
+Response: (200 - OK){
+    "success": true,
+    "message": "Success creating Question!",
+    "data": {
+        "updatedBy": "<user name>",
+        "isActive": "<user status>",
+        "_id": "<user id>",
+        "question": "<user question>",
+        "createdBy": "<user name>",
+        "createdAt": "<createdAt>",
+        "updatedAt": "<updatedAt>"
+    }
+}
+```
+```
+Response: (400 - Bad Request){
+    "success": false,
+    "message": "<error message>",
+}
+```
+
+**Get All Question**
+### http://localhost:3000/question/?page=page
+### example http://localhost:3000/question/?page=2
+
+```
+Request Header : Not Needed
+```
+```
+Request Body : Not Needed
+```
+```
+Response: (200 - OK){
+    "success": true,
+    "message": "Successfully retrieve all Question!",
+    "data": [
+        {
+            "updatedBy": "<user name>",
+            "isActive": "<user status>",
+            "_id": "<user id>",
+            "question": "<user question>",
+            "createdBy": "<user name>",
+            "createdAt": "<createdAt>",
+            "updatedAt": "<updatedAt>"
+        },
+        {
+            "updatedBy": "<user name>",
+            "isActive": "<user status>",
+            "_id": "<user id>",
+            "question": "<user question>",
+            "createdBy": "<user name>",
+            "createdAt": "<createdAt>",
+            "updatedAt": "<updatedAt>"
+        }
+    ],
+    "totalPages": "<total pages>",
+    "currentPage": "<current page>"
+}
+```
+```
+Response: (400 - Bad Request){
+    "success": false,
+    "message": "<error message>",
+}
+```
+
+**Get Question by id**
+### http://localhost:3000/question/:id
+### example http://localhost:3000/question/5fc355370741ca3434946d74
+
+```
+Request Header : Not Needed
+```
+```
+Request Body : Not Needed
+```
+```
+Response: (200 - OK){
+    "success": true,
+    "message": "Successfully showing detail question!",
+    "data": {
+        "updatedBy": "<user name>",
+        "isActive": "<user status>",
+        "_id": "<user id>",
+        "question": "<user question>",
+        "createdBy": "<user name>",
+        "createdAt": "<createdAt>",
+        "updatedAt": "<updatedAt>"
+        }
+```
+```
+Response: (400 - Bad Request){
+    "success": false,
+    "message": "<error message>",
+}
+```
+
+**Edit Question**
+### http://localhost:3000/question/edit/:id
+### example http://localhost:3000/question/edit/5fc355370741ca3434946d74
+
+```
+Request Header : Not Needed
+```
+```
+Request Body : {
+  "question": "<user question>",
+  "updatedBy": "<user name>"
+  "isActive": "<user status>"
+}
+```
+```
+Response: (200 - OK){
+    "success": true,
+    "message": "Question has been Updated.",
+    "data": {
+        "updatedBy": "<user name>",
+        "isActive": "<user status>",
+        "_id": "<user id>",
+        "question": "<user question>",
+        "createdBy": "<user name>",
+        "createdAt": "<createdAt>",
+        "updatedAt": "<updatedAt>"
+        }
+```
+```
+Response: (400 - Bad Request){
+    "success": false,
+    "message": "<error message>",
+}
+```
+
+**Delete Question**
+### http://localhost:3000/question/delete/:id
+### example http://localhost:3000/question/delete/5fc3b5d0f1573216fca1cf7d
+
+```
+Request Header : Not Needed
+```
+```
+Request Body : Not Needed
+```
+```
+Response: (200 - OK){
+    "success": true,
+    "message": "Question has been deleted.",
+    "data": {
+        "updatedBy": "<user name>",
+        "isActive": "<user status>",
+        "_id": "<user id>",
+        "question": "<user question>",
+        "createdBy": "<user name>",
+        "createdAt": "<createdAt>",
+        "updatedAt": "<updatedAt>"
+        }
+```
+```
+Response: (400 - Bad Request){
+    "success": false,
+    "message": "<error message>",
+}
+```
