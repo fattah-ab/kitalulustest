@@ -1,12 +1,11 @@
 const express = require("express");
-
 const app = express();
+
 const dotenv = require("dotenv");
 dotenv.config();
 
 const cors = require("cors");
 const mongoose = require("mongoose");
-
 
 // parser
 app.use(express.json());
@@ -33,7 +32,6 @@ db.once("open", () => console.log("Connected to mongodb!"));
 // routes
 const router = require('./routes');
 const errorHandler = require("./middlewares/errorHandler");
-
 
 app.use(router);
 app.use(errorHandler);
