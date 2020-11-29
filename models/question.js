@@ -5,19 +5,20 @@ const uniqueValidator = require("mongoose-unique-validator");
 const questionSchema = new Schema({
     question: {
         type: String,
+        required: [true, `Please enter your question!`]
     },
     createdBy: {
         type: String,
-        trim: true,
-        default: "anonymous"
+        required: [true, `Must be filled, Please enter your name!`]
     },
     updatedBy: {
         type: String,
-        trim: true,
-        default: "anonymous"
+        // required: [true, `Please enter your name!`],
+        default: null
     },
-    iaActive: {
-        type: boolean,
+    isActive: {
+        type: Boolean,
+        default: true
     }   
 }, { timestamps: true, versionKey: false });
 
