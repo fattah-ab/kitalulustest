@@ -32,17 +32,14 @@ db.once("open", () => console.log("Connected to mongodb!"));
 
 // routes
 const router = require('./routes');
-// const errorHandler = require("./middlewares/errorHandler");
+const errorHandler = require("./middlewares/errorHandler");
 
 
 app.use(router);
-// app.use(errorHandler);
+app.use(errorHandler);
 
 // server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Listening to ${PORT}`));
 
-// server.listen(PORT);
-// server.on("listening", () => {
-//     console.log(`Listening on localhost Port ${PORT}.`)
-// })
+
