@@ -9,5 +9,4 @@ router.get('/:id', QuestionController.getDetailQuestion)
 router.put('/edit/:id', QuestionController.editQuestion)
 router.delete('/delete/:id', QuestionController.deleteQuestion)
 
-
 module.exports = router
