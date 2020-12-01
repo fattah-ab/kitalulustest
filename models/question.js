@@ -13,7 +13,6 @@ const questionSchema = new Schema({
     },
     updatedBy: {
         type: String,
-        // required: [true, `Please enter your name!`],
         default: null
     },
     isActive: {

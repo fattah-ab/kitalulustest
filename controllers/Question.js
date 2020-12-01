@@ -42,7 +42,6 @@ class questionController {
                 message: "Successfully retrieve all Question!",
                 data: result,
                 totalPages: total,
-                // totalPages: Math.ceil(count / limit),
                 currentPage: page
             });
         } catch (err) {

@@ -43,13 +43,14 @@ to test this project please :
 
 1. Clone this repository
 2. Npm install at terminal
-3. Run endpoint/restfull API at Postman
+3. NPM run dev at terminal for running the program
+4. Run endpoint/restfull API at Postman
 ```
 
 ## End Point/Restfull API
 
 **Create Question**
-### http://localhost:3000/question/create
+### POST http://localhost:3000/question/create
 
 ```
 Request Header : Not Needed
@@ -83,7 +84,7 @@ Response: (400 - Bad Request){
 ```
 
 **Get All Question**
-### http://localhost:3000/question/?page=page
+### GET http://localhost:3000/question/?page=page
 ### example http://localhost:3000/question/?page=2
 
 ```
@@ -128,7 +129,7 @@ Response: (400 - Bad Request){
 ```
 
 **Get Question by id**
-### http://localhost:3000/question/:id
+### GET http://localhost:3000/question/:id
 ### example http://localhost:3000/question/5fc355370741ca3434946d74
 
 ```
@@ -159,7 +160,7 @@ Response: (400 - Bad Request){
 ```
 
 **Edit Question**
-### http://localhost:3000/question/edit/:id
+### PUT http://localhost:3000/question/edit/:id
 ### example http://localhost:3000/question/edit/5fc355370741ca3434946d74
 
 ```
@@ -194,7 +195,7 @@ Response: (400 - Bad Request){
 ```
 
 **Delete Question**
-### http://localhost:3000/question/delete/:id
+### DELETE http://localhost:3000/question/delete/:id
 ### example http://localhost:3000/question/delete/5fc3b5d0f1573216fca1cf7d
 
 ```
